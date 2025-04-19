@@ -1,17 +1,10 @@
 import streamlit as st
 import numpy as np
+import pickle
 import base64
-import os
-import joblib
 
-
-
-if not os.path.exists(".installed_dependencies"):  # Run only once
-    os.system("pip install -r requirements.txt")
-    open(".installed_dependencies", "w").close()
-    
 # Set page config
-st.set_page_config(layout="centered") 
+st.set_page_config(layout="centered")
 
 # --- SET BACKGROUND IMAGE ---
 def set_bg(image_file):
@@ -47,10 +40,8 @@ st.markdown(
 )
 
 # --- Load model ---
-
 with open('model.pkl', 'rb') as file:
-    model = joblib.load(file)
-
+    model = pickle.load(file)
 
 # --- Input Fields ---
 st.subheader("🔧 Email Campaign Details")
@@ -101,3 +92,7 @@ if st.button("🔍 Predict Click"):
         </div>
         """, unsafe_allow_html=True
     )
+
+    if result== "✅ User is likely to click!":
+        st.balloons()
+
