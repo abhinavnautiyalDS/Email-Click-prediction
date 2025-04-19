@@ -28,7 +28,7 @@ def set_bg(image_file):
     """
     st.markdown(css, unsafe_allow_html=True)
 
-set_bg("andrew_guan_lTUyP3RaLpw_unsplash_83f1b514-92d0-48e1-8fff-f866a18da1a2.jpg")  # Replace with your image filename
+set_bg("image")  # Replace with your image filename
 
 # --- TITLE & INTRO TEXT ---
 st.markdown(
