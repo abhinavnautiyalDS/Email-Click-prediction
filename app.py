@@ -2,7 +2,13 @@ import streamlit as st
 import numpy as np
 import pickle
 import base64
+import os
 
+
+if not os.path.exists(".installed_dependencies"):  # Run only once
+    os.system("pip install -r requirements.txt")
+    open(".installed_dependencies", "w").close()
+    
 # Set page config
 st.set_page_config(layout="centered")
 
