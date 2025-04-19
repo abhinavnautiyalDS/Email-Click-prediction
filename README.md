@@ -30,3 +30,48 @@ The VP of marketing thinks that it is stupid to send emails in a random way. Bas
 3. **link_clicked_table** - the id of the emails whose link inside was clicked at least once.
 - **email_id** : if the user clicked on the link within the email, then the id of the email shows up on this table.
 
+
+## ** Data Undertanding and Feature engineering**
+
+- The Email_table contains 100,000 rows and 7 columns, email_opened_table contains 10,345 rows and 1 column, and link_clicked_table contains 2,119 rows.
+
+- First, I merged Email_table with email_opened_table to get the users who opened the email. Let’s call this merged DataFrame df1.
+
+- Then, I created a new column in link_clicked_table named "click" and assigned it a value of 1 to indicate a click.
+
+- Next, I performed a left join between df1 and link_clicked_table on a common key (e.g., user ID or email ID), and filled the missing values in the "click" column with 0.
+  
+= This resulted in a binary target feature click, where 1 indicates the user clicked the link and 0 means they did not.
+
+- the result dataframe have no null and no duplicate rows.
+- 
+
+
+
+## **Exploratory Data Analysis**
+
+1. **Distribution of Categorical Features**:
+
+   ![image](https://github.com/user-attachments/assets/a53bc3e3-f8a9-4331-aea3-335b80bbb184)
+
+   **Insights**:
+   
+- **Distribution of email_text**
+  Short emails account for 55.7%, while long emails make up 44.3%.
+  This suggests a slight preference toward sending shorter emails, which could imply an assumption that users engage better with concise content.
+
+- **Distribution of email_version**
+  Personalized emails dominate at 61.5%, whereas generic emails represent 38.5%.
+  The emphasis on personalization aligns with best practices in email marketing, suggesting the team is already trying to optimize for engagement.
+
+- **Distribution of weekday**
+  Email distribution is fairly evenly spread across weekdays, with each day from Monday to Thursday having ~16% share.
+  Friday (10.2%), Saturday (12.3%), and Sunday (12.2%) have comparatively fewer emails sent.
+  This might indicate that marketing efforts are more focused on weekdays, possibly due to higher expected engagement during workdays.
+
+- **Distribution of user_country**
+  The majority of users are from the US (69.1%), followed by the UK (23.2%). France (3.9%) and Spain (3.8%) form smaller segments.
+
+  The campaign is heavily skewed towards the US and UK markets, indicating a primary audience focus on English-speaking regions.
+
+
