@@ -10,7 +10,7 @@ if not os.path.exists(".installed_dependencies"):  # Run only once
     open(".installed_dependencies", "w").close()
     
 # Set page config
-st.set_page_config(layout="centered")
+st.set_page_config(layout="centered") 
 
 # --- SET BACKGROUND IMAGE ---
 def set_bg(image_file):
