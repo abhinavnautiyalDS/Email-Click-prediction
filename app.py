@@ -3,6 +3,8 @@ import numpy as np
 import pickle
 import base64
 import os
+import joblib
+
 
 
 if not os.path.exists(".installed_dependencies"):  # Run only once
@@ -46,8 +48,10 @@ st.markdown(
 )
 
 # --- Load model ---
+
 with open('model.pkl', 'rb') as file:
-    model = pickle.load(file)
+    model = joblib.load(file)
+
 
 # --- Input Fields ---
 st.subheader("🔧 Email Campaign Details")
