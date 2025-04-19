@@ -28,7 +28,7 @@ def set_bg(image_file):
     """
     st.markdown(css, unsafe_allow_html=True)
 
-set_bg("image")  # Replace with your image filename
+set_bg("image.jpg")  # Replace with your image filename
 
 # --- TITLE & INTRO TEXT ---
 st.markdown(
