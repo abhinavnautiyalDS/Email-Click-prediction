@@ -195,10 +195,10 @@ Make iterative improvements based on performance data to maximise click rates.
 
 **Imbalanced dataset**
   Target feature in my dataset is imbalaned and if i trained model on this dataset then model prediction will based towards majority classes
-  ![image](https://github.com/user-attachments/assets/7c885288-deef-4a23-9d66-fbfdc42e77f3)
+![image](https://github.com/user-attachments/assets/7c885288-deef-4a23-9d66-fbfdc42e77f3)
   
   so , to Handle this problem i use **SMOTE** technique
-  ![image](https://github.com/user-attachments/assets/7a0f535f-7c4e-480d-8019-b85ca59e3106)
+![image](https://github.com/user-attachments/assets/7a0f535f-7c4e-480d-8019-b85ca59e3106)
 
 
 ## **Feature Selection**
@@ -256,6 +256,28 @@ For this task, I trained three models—logistic regression, decision tree, and 
 ![image](https://github.com/user-attachments/assets/3a0b5ea7-501e-4b7b-a5a9-edb400c9f19c)
 
 ![image](https://github.com/user-attachments/assets/51b4654f-5bab-475f-bfd5-c6f2654bf5a8)
+
+
+## **Conclusion** :
+The email marketing campaign analysis provides valuable insights and actionable strategies for improving future campaigns. Based on the exploratory data analysis and feature engineering, we identified key factors that influence user engagement and click-through rates.
+
+- **Optimal Email Content**: Personalized emails, concise in length, significantly outperform generic and longer emails. This highlights the importance of tailoring content to each user and ensuring it is brief and direct.
+
+- **Timing of Campaigns**: Emails sent during late morning hours (9 AM - 11 AM) have the highest click-through rates, emphasizing the need to schedule campaigns during peak engagement times.
+
+- **Targeting High-Engagement Regions**: Focusing on countries like the US and UK, where user engagement is notably higher, could drive better results. Localization of email content is essential to boost relevance and engagement.
+
+- **Customer Segmentation**: Targeting users with a higher number of past purchases proved effective in improving click rates, underscoring the importance of segmenting users based on past behavior and engagement.
+
+- **Model Optimization**: Through feature selection using Lasso regression and handling the class imbalance issue with SMOTE, we were able to create a predictive model that identifies factors influencing user clicks effectively. The model’s performance was optimized using hyperparameter tuning techniques like HalvingRandomSearchCV and RandomizedSearchCV.
+
+In conclusion, the combination of targeted content, optimal timing, personalized outreach, and efficient customer segmentation can significantly enhance the effectiveness of email marketing campaigns. Implementing these strategies, backed by data-driven insights, will help increase engagement and maximize click-through rates in future campaigns.
+
+
+## **Model Deployment** 
+
+I deploy my model in streamlit cloud 
+
 
 
 
