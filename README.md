@@ -146,6 +146,119 @@ Users with higher past purchases tend to have higher click-through rates, as see
 It could also indicate that these users are more familiar with the brand and may trust the content of the email more, leading to increased interaction with the email’s link. Targeting these users for special offers or personalised content might boost clicks even further.
 
 
+## **Business Recommendations to Increase Email Click-Through Rates**
+
+1. **Send Emails During Peak Times:**
+
+Schedule emails between 9 AM and 11 AM, as this is when engagement is highest.
+
+Avoid sending emails late in the afternoon or on weekends, as these tend to have lower click-through rates.
+
+2. **Personalise the Emails:**
+
+Use personalised versions of the emails (e.g., using the user’s name in the subject line or body), as personalised emails significantly outperform generic ones in terms of clicks.
+
+Customised content makes the email feel more relevant, fostering trust and prompting action.
+
+3. **Keep the Email Content Short:**
+
+Opt for shorter email text (2 paragraphs instead of 4), as users engage better with concise, scannable content.
+
+A brief and clear message with a direct call-to-action is more likely to encourage clicks than lengthy emails.
+
+4. **Target High-Engagement Countries:**
+
+Focus your efforts on regions like the US and UK, where users show higher engagement and click-through rates.
+
+Localise the content to suit the preferences and language of specific regions to increase the likelihood of users clicking the link.
+
+5. **Segment Users by Past Purchases:**
+
+Target users with higher past purchases as they are more likely to click on the email links.
+
+You could even create specific campaigns or promotions for these loyal customers, such as special offers or new product updates that cater to their interests.
+
+6. **Optimize the Email Design for Mobile Devices:**
+
+Ensure that the email is mobile-friendly since many users may access the email on their phones. A well-optimised design improves the chances of a click.
+
+7. **A/B Test Email Versions:**
+
+Continuously test both email versions (personalised vs. generic) and email text length (short vs. long) to identify the best-performing combination.
+
+Make iterative improvements based on performance data to maximise click rates.
+
+
+## **Data Preprocessing**
+
+- I perform label encoding to encode categorical column
+
+**Imbalanced dataset**
+  Target feature in my dataset is imbalaned and if i trained model on this dataset then model prediction will based towards majority classes
+  ![image](https://github.com/user-attachments/assets/7c885288-deef-4a23-9d66-fbfdc42e77f3)
+  
+  so , to Handle this problem i use **SMOTE** technique
+  ![image](https://github.com/user-attachments/assets/7a0f535f-7c4e-480d-8019-b85ca59e3106)
+
+
+## **Feature Selection**
+
+for feature selection i have used sparsity property of lasso regression , Lasso regression is a kind of regularisation and what do we mean by regularistaion , regurisation is a technique which is used to reduce overfitting by adding extra term during a training of our model. there is a paramter in lasso regresion called alpha and if we increase the value of alpha then it makes the coefficients of less important features to zero , so those features left which are important for prediction.
+
+## **Model Building**
+
+#### **Data Splitting**:
+I have split my dataset into three parts: Training set, Validation set, and Testing set, with a splitting ratio of 70:20:10. Now, I am going to train my model using the Training set and then check its performance using the Validation set. After that, I will perform hyperparameter tuning using the Validation set to find the best parameters. Once I find the best parameters, I will retrain my model using the Training set with these optimal parameters and evaluate its performance using evaluation metrics. Finally, I will test how my model performs on the unseen Testing set, which will give me an unbiased assessment of its performance
+
+#### **Hyperparameter Tuning**
+
+I have used two techniques for Hyperparamter Tuning
+1. HalvingRandomSearchCV
+2. RandomizedSearchCV
+
+#### **Evauluation metrics**
+
+When evaluating a classification model, several metrics can be used to assess its performance comprehensively. Below are key metrics and their significance:
+
+1. **Accuracy Score**: This metric indicates the proportion of correct predictions made by the model out of the total number of predictions. While accuracy is straightforward and intuitive, it has a significant limitation: it does not provide information about the types of errors the model is making.
+
+2. **Confusion Matrix**: The confusion matrix addresses the shortcomings of the accuracy score by detailing the types of errors. It provides a breakdown of the following:
+
+3. **True Positive (TP)**: The model correctly predicts a positive class (e.g., predicting cancer when the patient actually has cancer).
+False Positive (FP): The model incorrectly predicts a positive class (e.g., predicting cancer when the patient does not have cancer).
+True Negative (TN): The model correctly predicts a negative class (e.g., predicting no cancer when the patient does not have cancer).
+False Negative (FN): The model incorrectly predicts a negative class (e.g., predicting no cancer when the patient actually has cancer).
+Ideally, the number of false positives and false negatives should be zero or close to zero.
+
+4. **Precision (P)**: This metric measures the proportion of predicted positive cases that are actually positive:
+
+       Precision=TP/(TP+FP)
+Ideally, the precision value should be 1, indicating no false positives.
+
+5. **Recall (R)**: Also known as sensitivity, recall measures the proportion of actual positive cases that are correctly classified:
+
+Recall=TP/(TP+FN)
+Ideally, the recall value should be 1, indicating no false negatives.
+
+6. **F1 Score**: The F1 score is the harmonic mean of precision and recall, providing a single metric that balances both:
+
+F1_Score =2 Precision * Recall/(Precision+Recall)
+
+
+7. **ROC AUC**: The area under the ROC AUC curve (Receiver Operating Characteristic - Area Under the Curve) is a metric used to evaluate the performance of a classification model. It measures how well your model is able to distinguish between different classes
+
+
+
+#### **Model Training**
+
+For this task, I trained three models—logistic regression, decision tree, and random forest—and found that random forest achieved the highest accuracy among them.
+
+![image](https://github.com/user-attachments/assets/d3249b54-a1eb-4174-87df-85d44549f7c5)
+
+
+
+
+
 
 
 
