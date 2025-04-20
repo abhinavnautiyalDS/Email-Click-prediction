@@ -74,4 +74,24 @@ The VP of marketing thinks that it is stupid to send emails in a random way. Bas
 
   The campaign is heavily skewed towards the US and UK markets, indicating a primary audience focus on English-speaking regions.
 
+2. **Distribution of Numerical Features**
+
+   ![image](https://github.com/user-attachments/assets/f05949cd-3ac7-4e70-bbb2-8d64ed2b65d3)
+
+   **Insights**
+   
+   1. email_id:
+  The distribution is uniform, indicating that email_id is just a unique identifier without any predictive power. It doesn’t carry meaningful information for modelling and should be excluded from training features to avoid introducing noise.
+  
+  2. hour:
+  The distribution is right-skewed, with a peak between 8 AM and 12 PM, especially around 10 AM. This suggests emails are most frequently sent in the morning, possibly to maximise visibility and engagement — a business-driven choice likely based on user behaviour.
+  
+  3. user_past_purchases:
+  The distribution is heavily right-skewed, where most users have made fewer than 5 purchases, and very few have high purchase counts. This indicates a typical long-tail effect common in e-commerce or marketing datasets, reflecting that only a small portion of users are highly active customers.
+  
+  4. click:
+  The distribution is extremely imbalanced, with the majority of values being 0 (no click) and very few 1s (clicks). This highlights a class imbalance issue in the target variable, which can negatively impact model performance if not addressed through methods like resampling, class weighting, or appropriate evaluation metrics.
+
+
+
 
