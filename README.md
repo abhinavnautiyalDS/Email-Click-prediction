@@ -80,7 +80,7 @@ The VP of marketing thinks that it is stupid to send emails in a random way. Bas
 
    **Insights**
    
-   1. email_id:
+  1. email_id:
   The distribution is uniform, indicating that email_id is just a unique identifier without any predictive power. It doesn’t carry meaningful information for modelling and should be excluded from training features to avoid introducing noise.
   
   2. hour:
@@ -91,6 +91,63 @@ The VP of marketing thinks that it is stupid to send emails in a random way. Bas
   
   4. click:
   The distribution is extremely imbalanced, with the majority of values being 0 (no click) and very few 1s (clicks). This highlights a class imbalance issue in the target variable, which can negatively impact model performance if not addressed through methods like resampling, class weighting, or appropriate evaluation metrics.
+
+
+![image](https://github.com/user-attachments/assets/deff161c-b63c-4f20-85f2-dab83b8320b3)
+
+![image](https://github.com/user-attachments/assets/f8281709-8b68-45f3-91ee-a5a104f0d9ea)
+
+
+
+3. **How does the number of clicks vary across different weekdays?**
+
+  **Insights**
+  
+  Click behaviour varies significantly by weekday:
+  The highest number of clicks occurs on Wednesday (383), followed closely by Tuesday and Thursday (346 each), while Friday (187) shows the lowest engagement. This suggests users are most responsive to emails during the midweek, likely due to higher availability or work-related engagement. Click activity dips on weekends, possibly due to reduced work-related screen time and attention. Email campaigns may perform best when scheduled for midweek delivery
+
+4. **How does the email version impact the number of clicks?**
+
+  ![image](https://github.com/user-attachments/assets/4e37bc64-1908-4f49-b43c-f40828d57c22)
+
+  **Insights**
+  Personalized emails received significantly more clicks (1340) than generic ones (729), showing nearly 84% higher engagement. This suggests that customising content for recipients—such as using their names or tailored recommendations—increases relevance, trust, and encourages action. Generic emails may feel impersonal or spammy, reducing user interaction.
+
+
+5. **Does the length of the email impact the number of clicks?**
+
+![image](https://github.com/user-attachments/assets/7901526a-1d0f-47b8-a29e-44b58b1d9d71)
+
+Yes. Short emails generated more clicks (1165) compared to long emails (904). This suggests that concise messaging is more effective in grabbing users’ attention and prompting action. Readers likely prefer quick, scannable content over lengthy text, especially in crowded inboxes.
+
+
+6. **What is the best time of day to send emails for maximum clicks?**
+
+![image](https://github.com/user-attachments/assets/7523e8d8-5617-4e48-8a9e-cfe19ef71267)
+
+![image](https://github.com/user-attachments/assets/bf75eee8-fb42-4ceb-bcea-61d0cd96802b)
+
+
+The highest number of clicks occurred at 10 AM (226 clicks), followed by 9 AM (215) and 11 AM (197). This indicates that late morning hours (9–11 AM) are the peak engagement window.
+Clicks steadily rise from early morning and drop sharply after noon, suggesting that early distribution maximises engagement
+
+
+7. **How does the user's country affect the number of clicks?**
+
+![image](https://github.com/user-attachments/assets/e0687df8-e31b-4efb-946a-486508e1a2c3)
+The US had the highest number of clicks (1,650), followed by the UK (738). The relatively fewer clicks from countries like France (98) and Spain (87) suggest that users from the US and UK are more likely to engage with the emails.
+This could be due to factors such as localisation, familiarity with the brand, or higher engagement rates in these markets, suggesting that focusing more on these regions might boost campaign effectiveness.
+
+8. **How does the number of past purchases influence the likelihood of clicking on the email link?**
+
+![image](https://github.com/user-attachments/assets/8be90412-062a-4104-b69f-f27007de1f4e)
+
+Users with higher past purchases tend to have higher click-through rates, as seen in the distribution. This suggests that more engaged or loyal customers are more likely to respond to email campaigns.
+It could also indicate that these users are more familiar with the brand and may trust the content of the email more, leading to increased interaction with the email’s link. Targeting these users for special offers or personalised content might boost clicks even further.
+
+
+
+
 
 
 
