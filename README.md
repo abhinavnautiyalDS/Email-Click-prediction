@@ -253,7 +253,10 @@ F1_Score =2 Precision * Recall/(Precision+Recall)
 
 For this task, I trained three models—logistic regression, decision tree, and random forest—and found that random forest achieved the highest accuracy among them.
 
-![image](https://github.com/user-attachments/assets/d3249b54-a1eb-4174-87df-85d44549f7c5)
+![image](https://github.com/user-attachments/assets/3a0b5ea7-501e-4b7b-a5a9-edb400c9f19c)
+
+![image](https://github.com/user-attachments/assets/51b4654f-5bab-475f-bfd5-c6f2654bf5a8)
+
 
 
 
